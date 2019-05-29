@@ -7,13 +7,14 @@ const routes: Routes = [
     path: "", component: LoginComponent
   },
   {
-    path: "dashbord",
-    loadChildren: "./dashbord/dashbord.module#DashbordModule"
+    path:'Dashboard',
+    loadChildren: './dashboard/dashboard.module#DashboardModule'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,
+    { enableTracing: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
