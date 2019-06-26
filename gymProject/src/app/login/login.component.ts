@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
 
     onSubmit() {
         if (this.form.value.userName === 'gymadmin' && this.form.value.passWord === 123456) {
-            this.route.navigate(['/dashbord']);
+            this.route.navigate(['/Dashbord']);
             // } else {
             // this.showError = true;
             // this.error = "Invalid Username or PassWord";
