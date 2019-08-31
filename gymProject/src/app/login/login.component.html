@@ -3,19 +3,22 @@
     <div class="col-lg-4"></div>
     <div class="col-lg-4 content">
       <div class="header">
-        <h5>Please LogIn</h5>
+        Please LogIn Here
       </div>
       <div class="body">
         <form action="" [formGroup]="form">
           <div class="form-group">
-            <input type="text" class="form-control validators" placeholder="UserName" formControlName="userName">
+            <input type="text" class="form-control" placeholder="UserName" formControlName="userName">
           </div>
           <div class="form-group">
             <input type="password" class="form-control" placeholder="PassWord" formControlName="passWord">
           </div>
-          <button class="btn btn-success form-control" (click)="onSubmit()">LOGIN</button>
+          <button class="btn login-btn form-control text" (click)="onSubmit()">LOGIN</button>
           <div class="alert alert-danger" *ngIf="showError">
             {{error}}
+          </div>
+          <div class="text">
+            Not a Existing User ? <a [routerLink]="['/register']">Register Here</a>
           </div>
         </form>
       </div>

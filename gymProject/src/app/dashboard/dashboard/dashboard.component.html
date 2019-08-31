@@ -1,30 +1,23 @@
- <!-- <p>
-  dashboard works!
-</p>  -->
 
 <div class="wrapper">
-  <!-- Sidebar -->
   <nav id="sidebar">
     <div class="sidebar-header">
       Dashboard
     </div>
-
     <ul class="list-unstyled components">
       <p>Menu</p>
-      <li><a routerLink = "./AddPlan">AddPlan</a></li>
-      <li><a routerLink = "./AddScheme">AddScheme</a></li>
+      <li><a (click)="sideNavRoute('plan')">AddPlan</a></li>
+      <li><a (click)="sideNavRoute('scheme')">AddScheme</a></li>
     </ul>
   </nav>
-  <!-- Page Content -->
   <div id="content">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-  
-              <button type="button" id="sidebarCollapse" class="btn btn-info">
-                  <i class="fas fa-align-left"></i>
-                  <span>Navbar</span>
-              </button>
-          </div>
-      </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+          <i class="fas fa-align-left"></i>
+          <span>Navbar</span>
+        </button>
+      </div>
+    </nav>
   </div>
 </div>

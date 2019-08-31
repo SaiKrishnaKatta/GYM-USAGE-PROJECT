@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  activeTab;
+  constructor(private readonly route: Router) { }
 
   ngOnInit() {
   }
 
+  sideNavRoute(event){
+    switch(event) {
+      case 'plan': 
+        this.route.navigate(['/dashboard/addPlan']);
+       break;
+      case 'scheme':
+        this.route.navigate(['/dashboard/addScheme']);
+        break;
+    }
+
+    // }
+  }
 }
