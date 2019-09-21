@@ -6,21 +6,19 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
-    path:"dashboard",
-    component:DashboardComponent
-  },
-  {
-    path:"AddPlan",
-    component:AddPlanComponent
-  },
-  {
-    path:"AddScheme",
-    component:AddSchemeComponent
-  },
-  {
     path:"",
-    component:DashboardComponent
-  },
+    component:DashboardComponent,
+    children: [
+      {
+          path:"addPlan",
+          component:AddPlanComponent
+        },
+        {
+          path:"addScheme",
+          component:AddSchemeComponent
+        },
+    ]
+  }
 ];
 
 @NgModule({

@@ -1,0 +1,150 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 content">
+      <div class="header">
+        Register User Details
+      </div>
+      <div class="body">
+        <form [formGroup]="registerForm">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" name="Name" formControlName="userName" placeholder="User Name">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-lg-3 form-check">
+                  <input type="radio" class="form-check-input radio-btn" name="gender" value="male"
+                    formControlName="gender">
+                  <label class="text form-check-label">
+                    Male
+                  </label>
+                </div>
+                <div class="col-lg-3 form-check">
+                  <input type="radio" class="form-check-input radio-btn" name="gender" value="female"
+                    formControlName="gender">
+                  <label class="text form-check-label">
+                    Female
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="form-group">
+                <input type="text" class="form-control" name="age" formControlName="age" placeholder="age">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <input type="text" class="form-control" name="weight" formControlName="weight" placeholder="weight">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <input type="date" class="form-control" name="DOJ" formControlName="doj" placeholder="Date Of Joining">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" formControlName="email" placeholder="Email">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <input type="password" class="form-control" name="password" formControlName="password"
+                  placeholder="PassWord">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <input type="password" class="form-control" name="confirmPassword" formControlName="confirmPassword"
+                  placeholder="Confirm Password">
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="sub-header">Requirements</div>
+            <div class="body">
+              <label class="text">Morning (5am to 10am)</label>
+              <div class="d-flex">
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <input type="checkbox" class="default-checkbox" formControlName="aerobics">
+                    <label class="text">Aerobics</label>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <input type="checkbox" class="default-checkbox" formControlName="yoga">
+                    <label class="text">Yoga</label>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <input type="checkbox" class="default-checkbox" formControlName="gym">
+                    <label class="text">Gym</label>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <input type="checkbox" class="default-checkbox" formControlName="cardio">
+                    <label class="text">Cardio</label>
+                  </div>
+                </div>
+              </div>
+              <label class="text">Evening (4pm to 8pm)</label>
+              <div class="d-flex">
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <input type="checkbox" class="default-checkbox" formControlName="aerobics">
+                    <label class="text">Aerobics</label>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <input type="checkbox" class="default-checkbox" formControlName="gym">
+                    <label class="text">Gym</label>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <input type="checkbox" class="default-checkbox" formControlName="cardio">
+                    <label class="text">Cardio</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="sub-header">Payment</div>
+            <div class="body">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" formControlName="paidAmount" placeholder="Paid Amount">
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" formControlName="dueAmount" placeholder="Due Amount">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="d-flex justify-content-start">
+            <label class='text validators' *ngIf="showError">{{errorMessage}}</label>
+        </div>
+        <div class="d-flex justify-content-end">
+          <button class="btn register-btn" (click)="onRegister(id)">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
